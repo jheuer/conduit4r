@@ -5,11 +5,12 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "conduit_client"
-    gem.summary = %Q{TODO: one-line summary of your gem}
-    gem.description = %Q{TODO: longer description of your gem}
-    gem.email = "jheuer@gmail.com"
+    gem.summary = "A ruby interface to the HoneyApps Conduit API"
+    # gem.description = %Q{TODO: longer description of your gem}
+    gem.email = "jeff@honeyapps.com"
     gem.homepage = "http://github.com/jheuer/conduit_client"
     gem.authors = ["Jeff Heuer"]
+    gem.add_dependency "httparty", ">= 0"
     gem.add_development_dependency "thoughtbot-shoulda", ">= 0"
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
