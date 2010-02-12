@@ -4,14 +4,15 @@ require 'rake'
 begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
-    gem.name = "conduit_client"
-    gem.summary = "A ruby interface to the HoneyApps Conduit API"
+    gem.name = "conduit4r"
+    gem.summary = "A simple ruby interface to the HoneyApps Conduit API"
     # gem.description = %Q{TODO: longer description of your gem}
     gem.email = "jeff@honeyapps.com"
-    gem.homepage = "http://github.com/jheuer/conduit_client"
+    gem.homepage = "http://github.com/jheuer/conduit4r"
     gem.authors = ["Jeff Heuer"]
     gem.add_dependency "httparty", ">= 0"
     gem.add_development_dependency "thoughtbot-shoulda", ">= 0"
+    gem.files.include %w(lib/conduit4r.rb)
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
   Jeweler::GemcutterTasks.new
@@ -48,7 +49,7 @@ Rake::RDocTask.new do |rdoc|
   version = File.exist?('VERSION') ? File.read('VERSION') : ""
 
   rdoc.rdoc_dir = 'rdoc'
-  rdoc.title = "conduit_client #{version}"
+  rdoc.title = "conduit4r #{version}"
   rdoc.rdoc_files.include('README*')
   rdoc.rdoc_files.include('lib/**/*.rb')
 end
