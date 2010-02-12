@@ -24,7 +24,8 @@ Gem::Specification.new do |s|
      "VERSION",
      "conduit4r.gemspec",
      "lib/conduit4r.rb",
-     "test/helper.rb"
+     "test/helper.rb",
+     "test/test_conduit4r.rb"
   ]
   s.homepage = %q{http://github.com/jheuer/conduit4r}
   s.rdoc_options = ["--charset=UTF-8"]
