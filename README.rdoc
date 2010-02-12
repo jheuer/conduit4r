@@ -2,6 +2,38 @@
 
 A simple ruby interface to the HoneyApps Conduit API.
 
+Install
+-------
+
+    $ gem sources -a http://gemcutter.org
+    $ sudo gem install conduit4r
+
+Usage
+-----
+
+		$ irb
+		>> require 'rubygems'
+		>> require 'conduit4r'
+
+First, create a new Conduit4R instance using your host, email address, and password:
+
+    >> @conduit = Conduit4R.new("http://demo.conduit.honeyapps.com", "demouser@honeyapps.com", "demopassword")
+
+Then, you can pull a list of your vulnerabilities:
+
+    >> @conduit.vulnerabilities
+
+Or maybe you'd like a list of your assets:
+
+    >> @conduit.assets
+
+To page through a large resultset, you can pass :per_page and :start_index as optional parameters:
+
+		>> @conduit.assets(:per_page => 100)
+		>> @conduit.assets(:per_page => 100, :start_index => 100)
+		>> @conduit.assets(:per_page => 100, :start_index => 200)
+		>> ...
+
 == Copyright
 
 Copyright (c) 2010 HoneyApps LLC. See LICENSE for details.
